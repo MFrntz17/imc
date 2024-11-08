@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li> <a href="#é">O que é</a></li>
+            <li> <a href="#serve">Para que serve</a></li>
+            <li> <a href="#teste">Teste</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+
+    <h1>Ídicie de Massa Corporal</h1>
+
+    <div class="cotainer">
+        <h2>O que é o Ídicie de Massa Corporal</h2>
+        <p class="texto">O Índice de Massa Corporal (IMC) é uma fórmula que permite avaliar se o peso de uma pessoa está
+            adequado em relação à sua altura. É um parâmetro utilizado por profissionais de saúde, como médicos,
+            nutricionistas e fisioterapeutas, para classificar o estado antropométrico de um indivíduo.
+            O IMC é calculado dividindo o peso em quilos pela altura em metros ao quadrado. Uma pessoa é considerada ter
+            peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+            O IMC é uma ferramenta rápida e útil para saber se o peso está adequado, mas não é a forma mais exata de
+            avaliar o peso. Isso porque não leva em conta outros fatores importantes, como a idade, a composição
+            corporal, o nível de atividade física e o histórico de saúde. Por isso, é aconselhável consultar um médico
+            ou nutricionista para uma avaliação mais completa. </p><br><br><br>
+
+        <h2>Para que serve o Ídicie de Massa Corporal</h2>
+        <p>O Índice de Massa Corporal (IMC) é um cálculo que serve para avaliar se uma pessoa está com o peso ideal para
+            a sua altura. É uma ferramenta utilizada por profissionais de saúde para avaliar o estado nutricional e o
+            risco de mortalidade.
+            O IMC é calculado dividindo o peso (em kg) pela altura ao quadrado (em metros). A Organização Mundial de
+            Saúde (OMS) considera que um IMC entre 18,5 e 24,9 é a faixa de peso adequada.
+            O IMC é uma ferramenta importante, mas não deve ser avaliado isoladamente. Ele não leva em consideração a
+            composição corporal, o sexo, nem a distribuição da gordura. Por isso, não é recomendado para avaliar o peso
+            de atletas, pessoas muito musculosas, idosos ou grávidas.
+            O IMC é um dos parâmetros utilizados em exames de check-up. No entanto, o resultado do IMC não deve ser
+            considerado um indicativo de saúde. É mais recomendado que a pessoa mude o seu estilo de vida, como
+            alimentar-se bem, praticar atividade física, dormir bem e gerenciar as emoções. </p><br><br><br>
+    </div>
+
+    <div class="label">
+        <!-- <form action="#"> -->
+        <label for="altura"> Altura(cm)</label>
+        <input type="number" name="altura" id="altura">
+
+        <label for="peso">Peso(kg)</label>
+        <input type="number" name="peso" id="peso">
+
+        <button onclick="calcImc()">Calcular IMC</button>
+
+
+        <p>Seu índicie de massa corporal é: <span id="resultado"></span></p>
+    </div>
+    <!-- </form> -->
+
+    <script>
+        function calcImc() {
+            const altura = parseFloat(document.getElementById("altura").value);
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+    </script><br><br>
+
+    <footer>&copy;Frantz 2024</footer>
+
+</body>
+
+</html>
